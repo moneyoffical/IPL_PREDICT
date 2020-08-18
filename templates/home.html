@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <div>
+            <form action='/predict' method="POST">
+                <h1 align='center'>IPL SCORE PREDICTION</h1>
+
+
+                <h3>Select Venue</h3>
+                    <select name=venue required='required'><br>
+                        <option value="Barabati Stadium">Barabati Stadium</option>
+                        <option value="tets">Diesel</option>
+                        <option value="test">CNG</option>
+                    </select>
+
+                <h3>Bating team</h3>
+                    <select name=bat required='required'><br>
+                        <option value="bat_team_Chennai Super Kings">bat_team_Chennai Super Kings</option>
+                        <option value="tets">test</option>
+                        <option value="test">tets</option>
+                    </select>
+
+                <h3>Bowling team</h3>
+                    <select name=bowl required='required'><br>
+                        <option value="bowl_team_Mumbai Indians">bowl_team_Mumbai Indians</option>
+                        <option value="tets">test</option>
+                        <option value="test">test</option>
+                    </select>
+                       
+                <h3>Current Runs</h3><input name= crun type=number required='required'>
+                <h3>Current Wickets</h3><input name=cwic type=number required='required'>
+                <h3>Current Over</h3><input name=over type=number step=any required='required'>
+                <h3>Last five overs runs</h3><input name=frun type=number required='required'>
+                <h3>Last five overs ickets</h3><input name=fwic type=number required='required'>
+                <button id='sum' type="submit">Sumbit</button>
+                
+            </form>
+            <div>
+                <br>{{pred}}<br>
+            </div>
+        </div>
+    </body>
+</html>
